@@ -34,7 +34,7 @@ end
 def first_n_articles(number_of_articles)
   ARTICLES.slice(0, number_of_articles.to_i)
 end
-#
+
 def print_recipients
   print calculate_recipients.join(', ')
 end
@@ -45,6 +45,7 @@ def print_one_article(article)
   puts "#{article[:text]} \n\n"
 end
 
+#articles are an array built by calling on first_n_articles
 def print_many_articles(articles)
   articles.each do |article| 
     print_one_article(article)
